@@ -504,7 +504,7 @@ static NSDictionary * AFKeychainQueryDictionaryWithIdentifier(NSString *identifi
                               constructingBodyWithBlock:(void (^)(id <AFMultipartFormData> formData))block
 {
 	NSError *error;
-	NSMutableURLRequest *request = [[AFHTTPRequestOperationManager manager].requestSerializer multipartFormRequestWithMethod:method URLString:self.url.absoluteString parameters:parameters constructingBodyWithBlock:block error:&error];
+	NSMutableURLRequest *request = [[AFHTTPRequestOperationManager manager].requestSerializer multipartFormRequestWithMethod:method URLString:path parameters:parameters constructingBodyWithBlock:block error:&error];
 	
     // Only use parameters in the HTTP POST request body (with a content-type of `application/x-www-form-urlencoded`).
     // See RFC 5849, Section 3.4.1.3.1 http://tools.ietf.org/html/rfc5849#section-3.4
